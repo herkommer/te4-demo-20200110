@@ -1,0 +1,25 @@
+﻿@model List<HelloMVC.Models.Product>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>productlist</title>
+</head>
+<body>
+    <div> 
+        <p>We have @Model.Count products</p>
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>@item.Name (@item.Price SEK)</li>
+            }
+        </ul>
+    </div>
+</body>
+</html>
